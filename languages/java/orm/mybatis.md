@@ -1,8 +1,6 @@
 ## Q: 如果在spring项目中要用到原生的mybatis去查询，该怎样写？举个详细的例子
 
-##### ChatGPT 说：
-
-ChatGPT
+ChatGPT 说：
 
 在 Spring 项目中使用原生 MyBatis 进行查询可以按照以下步骤进行。假设我们有一个 Spring Boot 项目，以下是如何集成 MyBatis 并使用其进行原生 SQL 查询的详细示例。
 
@@ -217,9 +215,7 @@ public class UserController {
 
 ## Q: 针对复杂的sql语句，可以简单举个例子吗
 
-##### ChatGPT 说：
-
-ChatGPT
+ChatGPT 说：
 
 当然！对于复杂的 SQL 语句，使用 MyBatis 的 XML 配置可以帮助更清晰地组织 SQL 语句，并支持更复杂的查询逻辑。下面是一个简单的示例，展示了如何使用 MyBatis 的 XML 文件来处理复杂的 SQL 查询。
 
@@ -288,8 +284,6 @@ public interface UserMapper {
 **`UserMapper.xml`**：
 
 ```xml
-xml
-复制代码
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
@@ -487,7 +481,7 @@ public class UserController {
 
 ## Q: Mybatis里的 # 和 $ 的区别？
 
-##### ChatGPT 说：
+ChatGPT 说：
 
 在 MyBatis 中，`#` 和 `$` 是用来在 SQL 语句中插入参数的两种占位符，它们之间有很大的区别，主要在于参数如何处理和安全性方面：
 
@@ -507,17 +501,7 @@ public class UserController {
 
   如果 
 
-  ```
-  username
-  ```
-
-   参数值为 
-
-  ```
-  John
-  ```
-
-  ，则实际执行的 SQL 是：
+  `username` 参数值为 `John`，则实际执行的 SQL 是：
 
   ```sql
   SELECT * FROM users WHERE username = 'John'
@@ -537,37 +521,13 @@ public class UserController {
   SELECT * FROM users WHERE username = ${username}
   ```
 
-  如果 
-
-  ```
-  username
-  ```
-
-   参数值为 
-
-  ```
-  John
-  ```
-
-  ，则实际执行的 SQL 是：
+ `username`  参数值为  `John`，则实际执行的 SQL 是：
 
   ```sql
   SELECT * FROM users WHERE username = John
   ```
 
-  这里注意，
-
-  ```
-  John
-  ```
-
-   是未加引号的。如果 
-
-  ```sql
-  username
-  ```
-
-   参数值是 
+  这里注意，`John`  是未加引号的。如果 `username` 参数值是 
 
   ```sql
   'John' OR '1'='1'
@@ -592,7 +552,7 @@ public class UserController {
 
 ## Q:PreparedStatement是什么？可以防止SQL注入攻击吗
 
-##### ChatGPT 说：
+ChatGPT 说：
 
 `PreparedStatement` 是 Java 数据库连接（JDBC）API 中的一种接口，用于执行带有参数的 SQL 语句。与直接执行 SQL 语句的 `Statement` 不同，`PreparedStatement` 提供了一种更安全、更高效的方法来与数据库交互，特别是在处理动态参数和防止 SQL 注入攻击方面。
 
