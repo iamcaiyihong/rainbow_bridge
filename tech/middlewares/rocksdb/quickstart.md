@@ -1,6 +1,11 @@
 ## 安装
 ### 安装方法
-``brew install rocksdb``
+1. ``brew install rocksdb``
+2. App Store 安装 XCode
+3. 以下两个环境变量可能要设置(不确定)
+* export CGO_CFLAGS="-I/usr/local/include/rocksdb"
+* export CGO_LDFLAGS="-L/usr/local/lib -lrocksdb" 
+
 ### 验证
 rocksdb_ldb --version 
 
