@@ -1,3 +1,6 @@
+## 官网
+https://github.com/facebook/rocksdb/wiki
+
 ## 安装
 ### 安装方法
 1. ``brew install rocksdb``
